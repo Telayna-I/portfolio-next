@@ -1,101 +1,103 @@
+import Link from "next/link";
 import Image from "next/image";
+import { FaLinkedin, FaWhatsapp, FaGithub, FaCloudDownloadAlt } from "react-icons/fa";
+import { stack } from "./utils";
 
-export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+export default function HomeSection() {
+	return (
+		<>
+			<main className='px-4 fade-in'>
+				<section id='Home' className='flex flex-col w-3/4 m-auto'>
+					{/* Sección de iconos */}
+					<div className='flex flex-col md:flex-row justify-center items-center w-full m-auto space-y-6 md:space-y-0'>
+						<div className='flex flex-row md:flex-col justify-center items-center border rounded md:mr-5 transition-all duration-300'>
+							<Link
+								href='https://www.linkedin.com/in/telayna-i/'
+								target='_blank'
+								className='hover:bg-gray-300/40 transition-all duration-300'
+								aria-label='LinkedIn'>
+								<FaLinkedin className='m-2 md:my-5 w-5 h-5' />
+							</Link>
+							<Link
+								href='https://wa.me/542932534436'
+								className='hover:bg-gray-300/40 transition-all duration-300'
+								target='_blank'
+								aria-label='WhatsApp'>
+								<FaWhatsapp className='m-2 md:my-5 w-5 h-5' />
+							</Link>
+							<Link
+								className='hover:bg-gray-300/40 transition-all duration-300'
+								href='https://github.com/Telayna-I'
+								target='_blank'
+								aria-label='GitHub'>
+								<FaGithub className='m-2 md:my-5 w-5 h-5' />
+							</Link>
+						</div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+						{/* Sección de texto */}
+						<div className='text-center md:text-left w-full md:w-fit md:mr-20'>
+							<h1 className='text-2xl md:text-4xl font-semibold'>Hola, soy Iñaki.</h1>
+							<h3 className='text-gray-900/70 text-sm'>Full Stack developer.</h3>
+							<p className='mt-3 text-sm md:text-base'>
+								<span className='font-semibold'>Desarrollador full stack </span>
+								con experiencia en{" "}
+								<span className='font-semibold'>
+									React, Next.js y Node.js,
+								</span>{" "}
+								apasionado por transformar ideas en experiencias digitales
+								innovadoras. Me motiva trabajar en equipo y aprender continuamente,
+								siempre buscando soluciones que combinen funcionalidad y estilo.{" "}
+								<span className='font-semibold'>
+									¿Te imaginas lo que podemos construir juntos?
+								</span>
+							</p>
+						</div>
+
+						{/* Imagen optimizada */}
+						<div className='w-48 sm:w-60 md:w-96 relative'>
+							<Image
+								src='https://res.cloudinary.com/telayna-i/image/upload/v1730760273/Imagen_de_WhatsApp_2024-11-04_a_las_19.18.28_22343f45_bugo5i.jpg'
+								alt='Imagen de Iñaki'
+								layout='responsive'
+								width={700}
+								height={700}
+								className='rounded-full'
+							/>
+						</div>
+					</div>
+
+					{/* Botón de Descargar CV adaptado */}
+					<Link
+						href='https://drive.google.com/file/d/1wlHSEGbeNYDsSP2ruerMxhEziPzVXwXc/view?usp=sharing'
+						target='_blank'
+						className=' px-5 py-1 border mt-8 md:mt-0 w-fit rounded flex items-center mx-auto md:ml-14 font-semibold hover:bg-black/80 hover:text-white transition-all duration-300 shadow-md '>
+						Descargar CV <FaCloudDownloadAlt className='ml-3 w-5 h-5' />
+					</Link>
+				</section>
+			</main>
+			<section className='px-4 fade-in flex flex-col w-3/4 m-auto mt-32 justify-center'>
+				<h2 className='text-4xl font-bold self-center'>Stack</h2>
+				<div className='grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-12 mt-12'>
+					{stack.map((tech) => (
+						<div key={tech.title} className='flex flex-col items-center'>
+							{/* Ajuste de tamaño uniforme para los iconos y contenedor de altura fija */}
+							<figure className='w-16 h-16 flex items-center justify-center'>
+								<Image
+									src={tech.logo}
+									alt={tech.title}
+									width={tech.width || 50} // Tamaño uniforme para los iconos
+									height={tech.height || 50}
+									className='mb-2'
+								/>
+							</figure>
+							{/* Texto centrado y con altura fija para alineación */}
+							<span className='text-sm font-semibold text-center h-6 flex items-center'>
+								{tech.title}
+							</span>
+						</div>
+					))}
+				</div>
+			</section>
+		</>
+	);
 }
