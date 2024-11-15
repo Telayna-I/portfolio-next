@@ -11,14 +11,17 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
 	children,
+	chat,
 }: Readonly<{
 	children: React.ReactNode;
+	chat: React.ReactNode;
 }>) {
 	return (
 		<html lang='es'>
 			<body className={` ${poppins.className} antialiased`}>
 				<Navbar />
 				<div className='mt-32'>{children}</div>
+				{chat}
 			</body>
 		</html>
 	);
