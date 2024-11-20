@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { FaLinkedin, FaWhatsapp, FaGithub, FaCloudDownloadAlt } from "react-icons/fa";
 import { stack } from "./utils";
+import ProjectCard from "./componentes/proyect-cards/ProyectCard";
 
 export default function HomeSection() {
 	return (
@@ -75,6 +76,12 @@ export default function HomeSection() {
 					</Link>
 				</section>
 			</main>
+			<section className='px-4 fade-in flex flex-col w-3/4 m-auto mt-32'>
+				<h2 className='text-4xl font-bold self-center mb-12'>Trabajos</h2>
+				<ProjectCard />
+				<h2 className='text-4xl font-bold self-center mt-12 mb-12'>Proyectos</h2>
+				<ProjectCard />
+			</section>
 			<section className='px-4 fade-in flex flex-col w-3/4 m-auto mt-32 justify-center'>
 				<h2 className='text-4xl font-bold self-center'>Stack</h2>
 				<div className='grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-12 mt-12'>
