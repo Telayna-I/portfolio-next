@@ -1,4 +1,4 @@
-import { projects, works } from "@/app/utils";
+import { works } from "@/app/utils";
 import Link from "next/link";
 import React from "react";
 import { FaReact, FaNodeJs, FaGithub } from "react-icons/fa";
