@@ -1,4 +1,5 @@
 import { works } from "@/app/utils";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { FaReact, FaNodeJs, FaGithub } from "react-icons/fa";
@@ -38,8 +39,10 @@ const ProjectCard = () => {
 						role='article'
 						aria-label={`Project: ${project.title}`}>
 						<div className='relative w-full'>
-							<img
+							<Image
 								src={`https://${project.image}`}
+								width={5760}
+								height={4320}
 								alt={`Preview of ${project.title}`}
 								className='w-full h-auto object-cover'
 							/>
