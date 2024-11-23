@@ -1,35 +1,23 @@
+import { projects, works } from "@/app/utils";
+import Link from "next/link";
 import React from "react";
-import { FaReact, FaNodeJs, FaPython, FaGithub } from "react-icons/fa";
-import { SiTailwindcss, SiTypescript } from "react-icons/si";
+import { FaReact, FaNodeJs, FaGithub } from "react-icons/fa";
+import { RiFirebaseFill, RiJavascriptFill } from "react-icons/ri";
+import { SiNextdotjs, SiTailwindcss, SiTypescript } from "react-icons/si";
 
 const ProjectCard = () => {
-	const projects = [
-		{
-			id: 1,
-			title: "E-Commerce Platform",
-			description:
-				"A modern e-commerce platform built with React and Node.js, featuring real-time inventory management and secure payment processing.",
-			image: "images.unsplash.com/photo-1661956602116-aa6865609028",
-			technologies: ["react", "node", "typescript", "tailwind"],
-		},
-		{
-			id: 2,
-			title: "AI Image Generator",
-			description:
-				"Advanced AI-powered image generation tool using Python and TensorFlow, capable of creating unique artistic compositions.",
-			image: "images.unsplash.com/photo-1657387640203-05dbc0dd0fb7",
-			technologies: ["python", "react", "node"],
-		},
-	];
-
 	const getTechnologyIcon = (tech: string) => {
 		switch (tech) {
 			case "react":
 				return <FaReact className='w-6 h-6 text-blue-500' />;
 			case "node":
 				return <FaNodeJs className='w-6 h-6 text-green-500' />;
-			case "python":
-				return <FaPython className='w-6 h-6 text-yellow-500' />;
+			case "firebase":
+				return <RiFirebaseFill className='w-6 h-6 text-yellow-500' />;
+			case "javascript":
+				return <RiJavascriptFill className='w-6 h-6 text-yellow-500' />;
+			case "next":
+				return <SiNextdotjs className='w-6 h-6 text-black' />;
 			case "typescript":
 				return <SiTypescript className='w-6 h-6 text-blue-600' />;
 			case "tailwind":
@@ -42,18 +30,18 @@ const ProjectCard = () => {
 	return (
 		<>
 			<div className='flex flex-wrap justify-center gap-8 w-full'>
-				{projects.map((project) => (
+				{works.map((project) => (
 					<div
 						key={project.id}
-						className={`bg-white rounded-md shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 w-full sm:w-1/2 lg:w-1/3 xl:w-2/6`}
+						className={`bg-white rounded-md shadow-lg overflow-hidden transform transition-all duration-300 w-full sm:w-1/2 lg:w-1/3 xl:w-5/12`}
 						tabIndex={0}
 						role='article'
 						aria-label={`Project: ${project.title}`}>
-						<div className='relative h-48 overflow-hidden'>
+						<div className='relative w-full'>
 							<img
 								src={`https://${project.image}`}
 								alt={`Preview of ${project.title}`}
-								className='w-full h-full object-cover'
+								className='w-full h-auto object-cover'
 							/>
 						</div>
 						<div className='p-6'>
@@ -75,17 +63,21 @@ const ProjectCard = () => {
 								))}
 							</div>
 							<div className='flex justify-between items-center'>
-								<button
-									className='flex items-center space-x-2 text-gray-600 hover:text-blue-500 transition-colors duration-200'
+								<Link
+									href={`${project.code}`}
+									target='blank'
+									className='flex items-center space-x-2 text-gray-600 hover:text-black/80 transition-colors duration-200'
 									aria-label='View project on GitHub'>
 									<FaGithub className='w-5 h-5' />
-									<span className='text-sm'>View Source</span>
-								</button>
-								<button
-									className='px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors duration-200 text-sm'
+									<span className='text-sm'>Código fuente</span>
+								</Link>
+								<Link
+									href={`${project.demo}`}
+									target='blank'
+									className='px-4 py-2 bg-black/80 text-white rounded transition-colors duration-200 text-sm'
 									aria-label='View project details'>
-									Learn More
-								</button>
+									Demo⚡
+								</Link>
 							</div>
 						</div>
 					</div>
