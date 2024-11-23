@@ -10,18 +10,15 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-	children,
-	chat,
-}: Readonly<{
-	children: React.ReactNode;
-	chat: React.ReactNode;
-}>) {
+	children, // Solo usamos `children` por defecto en Next.js.
+}: {
+	children: React.ReactNode; // Definimos `children` como ReactNode.
+}) {
 	return (
 		<html lang='es'>
 			<body className={` ${poppins.className} antialiased`}>
 				<Navbar />
 				<div className='mt-32'>{children}</div>
-				{chat}
 			</body>
 		</html>
 	);
