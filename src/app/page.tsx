@@ -78,9 +78,9 @@ export default function HomeSection() {
 			</main>
 			<section className='px-4 fade-in flex flex-col w-3/4 m-auto mt-32'>
 				<h2 className='text-4xl font-bold self-center mb-12'>Trabajos</h2>
-				<ProjectCard />
+				<ProjectCard type='works' />
 				<h2 className='text-4xl font-bold self-center mt-12 mb-12'>Proyectos</h2>
-				<ProjectCard />
+				<ProjectCard type='projects' />
 			</section>
 			<section className='px-4 fade-in flex flex-col w-3/4 m-auto mt-32 justify-center'>
 				<h2 className='text-4xl font-bold self-center'>Stack</h2>
