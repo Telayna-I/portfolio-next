@@ -69,7 +69,7 @@ export default function HomeSection() {
 
 					{/* Botón de Descargar CV adaptado */}
 					<Link
-						href='https://drive.google.com/file/d/1wlHSEGbeNYDsSP2ruerMxhEziPzVXwXc/view?usp=sharing'
+						href='https://drive.google.com/file/d/1EkLFeTfo62B2Wy03PMthMyDAqaMiW0p0/view?usp=drive_link'
 						target='_blank'
 						className=' px-5 py-1 border mt-8 md:mt-0 w-fit rounded flex items-center mx-auto md:ml-14 font-semibold hover:bg-black/80 hover:text-white transition-all duration-300 shadow-md '>
 						Descargar CV <FaCloudDownloadAlt className='ml-3 w-5 h-5' />

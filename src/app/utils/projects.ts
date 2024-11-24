@@ -26,8 +26,8 @@ export const works = [
 			"Sitio web informativo diseñado para presentar las carreras ofrecidas por el Instituto de Formación Técnica N° 190 en la muestra de carreras de la Universidad Nacional del Sur. La plataforma proporciona detalles sobre los programas disponibles, incluyendo requisitos, planes de estudio y cómo inscribirse, brindando a los interesados una visión completa de las opciones educativas del instituto en un solo lugar.",
 		image: "res.cloudinary.com/telayna-i/image/upload/v1732406642/140shots_so_xaydaz.png",
 		technologies: ["react", "javascript"],
-		demo: "https://estetica-git-demo-telaynais-projects.vercel.app/",
-		code: "https://github.com/Telayna-I/estetica",
+		demo: "https://isft190.vercel.app/",
+		code: "https://github.com/Telayna-I/ISFT190",
 	},
 	{
 		id: 4,
