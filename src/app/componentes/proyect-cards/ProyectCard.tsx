@@ -2,10 +2,18 @@ import { projects, works } from "@/app/utils";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { BiLogoPostgresql } from "react-icons/bi";
+import { BiLogoMongodb, BiLogoPostgresql } from "react-icons/bi";
 import { FaReact, FaNodeJs, FaGithub, FaCcPaypal } from "react-icons/fa";
 import { RiFirebaseFill, RiJavascriptFill } from "react-icons/ri";
-import { SiNextdotjs, SiPrisma, SiTailwindcss, SiTypescript, SiZod } from "react-icons/si";
+import {
+	SiExpress,
+	SiJsonwebtokens,
+	SiNextdotjs,
+	SiPrisma,
+	SiTailwindcss,
+	SiTypescript,
+	SiZod,
+} from "react-icons/si";
 
 interface Props {
 	type: string;
@@ -18,6 +26,10 @@ const ProjectCard = ({ type }: Props) => {
 				return <FaReact className='w-6 h-6 text-blue-500' />;
 			case "node":
 				return <FaNodeJs className='w-6 h-6 text-green-500' />;
+			case "express":
+				return <SiExpress className='w-6 h-6 text-black' />;
+			case "jwt":
+				return <SiJsonwebtokens className='w-6 h-6 text-pink-500' />;
 			case "firebase":
 				return <RiFirebaseFill className='w-6 h-6 text-yellow-500' />;
 			case "javascript":
@@ -30,6 +42,8 @@ const ProjectCard = ({ type }: Props) => {
 				return <SiPrisma className='w-6 h-6 text-black' />;
 			case "postgres":
 				return <BiLogoPostgresql className='w-6 h-6 text-blue-600' />;
+			case "mongo":
+				return <BiLogoMongodb className='w-6 h-6 text-green-600' />;
 			case "typescript":
 				return <SiTypescript className='w-6 h-6 text-blue-600' />;
 			case "paypal":
@@ -123,7 +137,7 @@ const ProjectCard = ({ type }: Props) => {
 								<p className='text-gray-600 mb-4 text-sm leading-relaxed'>
 									{project.description}
 								</p>
-								<div className='flex items-center space-x-3 mb-4'>
+								<div className='flex flex-wrap justify-start gap-2 mb-4'>
 									{project.technologies.map((tech, idx) => (
 										<div
 											key={idx}

@@ -5,7 +5,7 @@ export const works = [
 		description:
 			"Administra de manera eficiente los turnos de tu centro de estética con esta plataforma todo-en-uno. Crea y gestiona usuarios, pacientes y turnos, con la posibilidad de editar y eliminar información en tiempo real. Agrega imágenes a los turnos para un seguimiento completo y visualiza el estado de los mismos desde un intuitivo tablero que permite filtrar por mes, semana o día. Organiza, optimiza y mejora la experiencia tanto para el equipo médico como para los pacientes.",
 		image: "res.cloudinary.com/telayna-i/image/upload/v1732407304/814shots_so_wgalrv.png",
-		technologies: ["next", "typescript", "prisma", "postgres", "zod", "tailwind"],
+		technologies: ["next", "typescript", "jwt", "prisma", "postgres", "zod", "tailwind"],
 		demo: "https://estetica-git-demo-telaynais-projects.vercel.app/",
 		code: "https://github.com/Telayna-I/estetica",
 	},
@@ -18,6 +18,16 @@ export const works = [
 		technologies: ["react", "javascript", "firebase"],
 		demo: "https://demo-pedidos.vercel.app/",
 		code: "https://github.com/Telayna-I/demo-pedidos",
+	},
+	{
+		id: 6,
+		title: "API Repostera: Innovación en la Gestión de Pedidos",
+		description:
+			"Simplifica la administración de pedidos, usuarios y tareas con una API diseñada para reposterías. Incluye autenticación segura, manejo de roles, búsqueda avanzada y estados personalizables para optimizar la gestión del negocio. ¡Todo lo que necesitas para llevar tu repostería al siguiente nivel!",
+		image: "res.cloudinary.com/telayna-i/image/upload/v1732571642/2shots_so_sneebu.png",
+		technologies: ["node", "express", "javascript", "mongo", "jwt"],
+		demo: "https://api-repostera.onrender.com/",
+		code: "https://github.com/Telayna-I/API-REPOSTERA",
 	},
 	{
 		id: 3,
@@ -48,7 +58,16 @@ export const projects = [
 		description:
 			"Una plataforma de e-commerce que permite la compra de productos con un sistema de registro de usuarios y roles. Los usuarios pueden ser compradores comunes o administradores, quienes tienen acceso a herramientas para crear, modificar y eliminar productos, asignándolos a categorías específicas. Cada producto incluye imágenes, tallas y cantidades. La plataforma cuenta con integración de pagos a través de PayPal y un panel administrativo completo para gestionar stock, precios, descripciones y tallas. Al momento de realizar un pago, los usuarios deben registrarse y sus datos, como dirección y detalles personales, se almacenan para facilitar futuras compras.",
 		image: "res.cloudinary.com/telayna-i/image/upload/v1732411375/27shots_so_xqpsko.png",
-		technologies: ["next", "typescript", "zod", "prisma", "postgres", "tailwind", "paypal"],
+		technologies: [
+			"next",
+			"typescript",
+			"zod",
+			"jwt",
+			"prisma",
+			"postgres",
+			"tailwind",
+			"paypal",
+		],
 		demo: "https://tesla-shop-git-demo-telaynais-projects.vercel.app/",
 		code: "https://github.com/Telayna-I/teslashop",
 	},

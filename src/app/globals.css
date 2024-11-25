@@ -29,3 +29,11 @@
 	-webkit-animation-name: fadeIn;
 	animation-name: fadeIn;
 }
+
+html {
+	scroll-behavior: smooth;
+}
+
+section {
+	scroll-margin-top: 80px; /* Ajusta según la altura de tu navbar */
+}

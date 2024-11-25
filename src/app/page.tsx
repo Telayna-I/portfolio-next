@@ -3,12 +3,13 @@ import Image from "next/image";
 import { FaLinkedin, FaWhatsapp, FaGithub, FaCloudDownloadAlt } from "react-icons/fa";
 import { stack } from "./utils";
 import ProjectCard from "./componentes/proyect-cards/ProyectCard";
+import Footer from "./componentes/footer/Footer";
 
 export default function HomeSection() {
 	return (
 		<>
 			<main className='px-4 fade-in'>
-				<section id='Home' className='flex flex-col w-3/4 m-auto'>
+				<section id='inicio' className='flex flex-col w-3/4 m-auto'>
 					{/* Sección de iconos */}
 					<div className='flex flex-col md:flex-row justify-center items-center w-full m-auto space-y-6 md:space-y-0'>
 						<div className='flex flex-row md:flex-col justify-center items-center border rounded md:mr-5 transition-all duration-300'>
@@ -76,13 +77,17 @@ export default function HomeSection() {
 					</Link>
 				</section>
 			</main>
-			<section className='px-4 fade-in flex flex-col w-3/4 m-auto mt-32'>
+			<section id='trabajos' className='px-4 fade-in flex flex-col w-3/4 m-auto mt-32'>
 				<h2 className='text-4xl font-bold self-center mb-12'>Trabajos</h2>
 				<ProjectCard type='works' />
+			</section>
+			<section id='proyectos' className='px-4 fade-in flex flex-col w-3/4 m-auto mt-32'>
 				<h2 className='text-4xl font-bold self-center mt-12 mb-12'>Proyectos</h2>
 				<ProjectCard type='projects' />
 			</section>
-			<section className='px-4 fade-in flex flex-col w-3/4 m-auto mt-32 justify-center'>
+			<section
+				id='stack'
+				className='px-4 fade-in flex flex-col w-3/4 m-auto mt-32 justify-center mb-10'>
 				<h2 className='text-4xl font-bold self-center'>Stack</h2>
 				<div className='grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-12 mt-12'>
 					{stack.map((tech) => (
@@ -105,6 +110,7 @@ export default function HomeSection() {
 					))}
 				</div>
 			</section>
+			<Footer />
 		</>
 	);
 }

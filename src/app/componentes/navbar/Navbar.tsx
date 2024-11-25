@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
 
@@ -8,11 +9,10 @@ const Navigation = () => {
 	const [scrolled, setScrolled] = useState(false);
 
 	const navigationItems = [
-		{ id: 1, label: "Home", href: "#home" },
+		{ id: 1, label: "Inicio", href: "#inicio" },
 		{ id: 2, label: "Trabajos", href: "#trabajos" },
 		{ id: 3, label: "Proyectos", href: "#proyectos" },
-		{ id: 4, label: "Services", href: "#services" },
-		{ id: 5, label: "Contact", href: "#contact" },
+		{ id: 4, label: "Tecnologías", href: "#stack" },
 	];
 
 	useEffect(() => {
@@ -48,13 +48,13 @@ const Navigation = () => {
 					<div className='hidden md:block'>
 						<div className='ml-10 flex items-center space-x-8'>
 							{navigationItems.map((item) => (
-								<a
+								<Link
 									key={item.id}
 									href={item.href}
 									className='text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-semibold transition-colors duration-200'
 									aria-label={item.label}>
 									{item.label}
-								</a>
+								</Link>
 							))}
 						</div>
 					</div>
