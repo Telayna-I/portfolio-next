@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next"
 
 import "./globals.css";
 import Navbar from "./componentes/navbar/Navbar";
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
+
 	children, // Solo usamos `children` por defecto en Next.js.
 }: {
 	children: React.ReactNode; // Definimos `children` como ReactNode.
@@ -19,6 +21,7 @@ export default function RootLayout({
 			<body className={` ${poppins.className} antialiased`}>
 				<Navbar />
 				<div className='mt-32'>{children}</div>
+				<Analytics />
 			</body>
 		</html>
 	);
